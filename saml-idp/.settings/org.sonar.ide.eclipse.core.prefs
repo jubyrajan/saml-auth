@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+extraProperties=
+projectKey=org.jr.saml-auth\:saml-idp
+serverUrl=http\://localhost\:9000
+version=2

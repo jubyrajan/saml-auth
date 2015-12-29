@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="saml-sp" default="war">
+	<path id="build.class.path">
+	    <fileset dir="WebContent/WEB-INF/lib">
+	        <include name="*.jar" />
+	    </fileset>
+	</path>
+	
+	<target name="clean">
+		<delete>
+			<fileset dir="WebContent/WEB-INF/classes" includes="**/*"/>
+		</delete>
+	</target>
+    <target name="compile">
+    	<javac classpathref="build.class.path" srcdir="src" destdir="WebContent/WEB-INF/classes"/>
+    </target>
+	
+	<target name="war" depends="clean, compile">
+		<war destfile="saml-sp.war" needxmlfile="false">
+		    <fileset dir = "WebContent">
+		      <include name = "**/*.*"/>
+		   </fileset>
+		</war>
+	</target>
+</project>
